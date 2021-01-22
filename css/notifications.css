@@ -1,0 +1,139 @@
+.headline {
+    font-size: 30px;
+    color: #6C63FE;
+    font-weight: 600;
+}
+
+.notifications {
+    width: 60%;
+    margin-top: 50px;
+}
+
+.selected {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #6C63FE;
+    border-radius: 50px;
+    height: 50px;
+    opacity: 0;
+    color: white;
+    margin-left: -100px;
+    transition: opacity 0.4s,
+                margin-left 0.4s;
+}
+
+.selected.active {
+    margin: 0;
+    opacity: 1;
+    transition: opacity 0.4s 0.4s,
+                margin-left 0.4s 0.4s;
+}
+
+.number span {
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+
+.selected .trash {
+    position: absolute;
+    right: 25px;
+    cursor: pointer;
+}
+
+.not-boxes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: -50px;
+    transition: margin-top 0.4s 0.4s;
+}
+
+.not-boxes.active {
+    margin-top: 30px;
+    transition: margin-top 0.4s;
+}
+
+.select-all {
+    font-size: 15px;
+    display: flex;
+}
+
+.select-all span {
+    margin-right: 10px;
+    color: #6C63FE;
+}
+
+.not-box {
+    display: flex;
+    position: relative;
+    min-height: 60px;
+    width: 100%;
+    margin-top: 15px;
+    align-items: center;
+}
+
+.not-box.deleted {
+    display: none;
+}
+
+.left-icon {
+    font-size: 35px;
+    color: #6C63FE;
+}
+
+.type-content {
+    color: black;
+    background: none;
+    font-size: 15px;
+    padding: 5px 120px 5px 20px;
+}
+
+.utils {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+.utils .trash {
+    margin-right: 15px;
+    cursor: pointer;
+    color: #6C63FE;
+}
+
+.checkbox,
+.checkbox-all {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: white;
+    outline: none;
+    border: solid 2px #6C63FE;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.4s;
+}
+
+.checkbox::after,
+.checkbox-all::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: url(../imgs/check.svg);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox:checked,
+.checkbox-all:checked {
+    background: #6C63FE;
+}

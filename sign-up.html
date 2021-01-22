@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/forms.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <title>Lust - Sign-up</title>
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html"><img class="logo" src="imgs/logo.png" alt="Lust" title="Retourner à l'accueil"></a>
+        <ul class="nav-links">
+            <li class="home">
+                <a href="#">Chat</a>
+            </li>
+            <li class="about">
+                <a href="#">A propos</a>
+            </li>
+            <div class="signs">
+                <li class="sign-in">
+                    <a href="sign-in.html">Connexion</a>
+                </li>
+                <li class="sign-up">
+                    <a href="sign-up.html">Inscription</a>
+                </li>
+            </div>
+            <li class="profile log">
+                <div class="drop">
+                    <div class="avatar"></div>
+                    <div class="drop-nav">
+                        <a href="profile.html">Profil</a>
+                        <a href="notifications.html">Notifications (1)</a>
+                        <a href="#">Déconnexion</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="burger-container">
+            <div class="top-bar"></div>
+            <div class="middle-bar"></div>
+            <div class="bottom-bar"></div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="headline">Sign up</h1>
+        <form class="fields" action="">
+            <div class="form-field">
+                <i class="pseudo fas fa-user"></i>
+                <input type="text" placeholder="Pseudo">
+            </div>
+            <div class="pseudo-hr"></div>
+            <div class="form-field">
+                <i class="envelope fas fa-envelope"></i>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="email-hr"></div>
+            <div class="form-field">
+                <i class="lock fas fa-lock"></i>
+                <input type="password" placeholder="Mot de passe">
+            </div>
+            <div class="password-hr"></div>
+            <div class="form-field">
+                <i class="lock fas fa-lock"></i>
+                <input type="password" placeholder="Confirmer le mot de passe">
+            </div>
+            <div class="confirm-hr"></div>
+            <button class="sign-up-submit" type="">Sign up</button>
+        </form>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/sign-up.js"></script>
+</body>
+
+</html>

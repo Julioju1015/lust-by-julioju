@@ -1,0 +1,297 @@
+.headline {
+    font-size: 30px;
+    color: #6C63FE;
+    font-weight: 600;
+}
+
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 500px;
+    margin-top: 50px;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    background-image: url(../imgs/profile.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-avatar .import {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s,
+                visibility 0s 0.2s;
+} 
+
+.profile-avatar:hover .import {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s,
+                visibility 0s;
+}
+
+.info {
+    display: flex;
+    width: 60%;
+    margin-left: 25px;
+    justify-content: space-between;
+}
+
+.account .title {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    width: 200px;
+}
+
+.social-networks .title {
+    margin-top: 50px;
+}
+
+.titles-box,
+.titles-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.pseudo,
+.password {
+    color: #6C63FE;
+    min-width: 200px;
+    outline: none;
+    padding: 3px 13px;
+    transition: opacity 0.2s;
+    border: solid 2px transparent;
+    border-radius: 25px;
+    transition: border-color 0.4s;
+}
+
+.pseudo {
+    margin-top: -5px;
+}
+
+.password {
+    margin-top: 10px;
+}
+
+.pseudo:focus,
+.password:focus {
+    opacity: 1;
+    border-color: #6C63FE;
+}
+
+.social-networks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-networks .title {
+    font-size: 25px;
+    color: #6C63FE;
+    font-weight: 400;
+}
+
+.social-boxes {
+    margin-top: 10px;
+}
+
+.social-box {
+    width: 100%;
+    min-height: 30px;
+    color: #6C63FE;
+    border-radius: 50px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background 0.4s,
+                color 0.4s;
+}
+
+.social-name{
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+.add-social {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    border: solid 2px #6C63FE;
+    position: relative;
+    margin-top: 20px;
+    transition: background 0.4s;
+}
+
+.add-social::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: #6C63FE;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: background 0.4s;
+}
+
+.add-social::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: #6C63FE;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: background 0.4s,
+                transform 0.4s;
+}
+
+.add-social:hover {
+    background: #6C63FE;
+}
+
+.add-social:hover::before,
+.add-social:hover::after {
+    background: white;
+}
+
+.add-social.active::after {
+    transform: rotate(0) translate(-50%, -50%);
+}
+
+.social-list {
+    color: white;
+    background: #6C63FE;
+    border-radius: 30px;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 0;
+    padding: 0 15px;
+    font-size: 20px;
+    margin-top: 20px;
+    position: relative;
+    list-style: none;
+    transition: padding 0.4s,
+                height 0.4s;
+}
+
+.social-list.active {
+    height: 35px;
+    padding: 8px 15px;
+}
+
+.social-list .icon {
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s,
+                visibility 0s 0.4s;
+}
+
+.social-list.active .icon{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s,
+                transform 0.2s,
+                visibility 0s;
+}
+
+.social-list.active .icon:hover {
+    transform: scale(1.1);
+}
+
+.social-list::after {
+    content: "";
+    position: absolute;
+    width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+    border-bottom: 12px solid #6C63FE;
+    top: 0px;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.social-list.active::after {
+    top: -12px;
+    opacity: 1;
+    transition: top 0.2s 0.5s,
+                opacity 0.4s;
+}
+
+.input-value-box {
+    margin-top: 10px;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s,
+                visibility 0s;
+}
+
+.prefix {
+    background: #6C63FE;
+    border-radius: 25px 0 0 25px;
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    margin-left: -100px;
+    visibility: hidden;
+    transition: opacity 0.4s,
+                visibility 0s,
+                margin 0.4s;
+}
+
+.input-value-box .value {
+    border-radius: 0 25px 25px 0;
+    outline: none;
+    font-size: 15px;
+    border: none;
+    width: 0;
+    transition: opacity 0.4s,
+                visibility 0s,
+                width 0.4s 0.4s,
+                padding 0s 0.4s,
+                border 0s 0.4s;
+}
+
+.input-value-box.active .value {
+    opacity: 1;
+    width: 260px;
+    border: 2px solid #6C63FE;
+    padding: 7px 10px;
+    visibility: visible;
+}
+
+.input-value-box.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s,
+                visibility 0s 0.4s;
+}
+
+.input-value-box.active .prefix {
+    margin: 0;
+    opacity: 1;
+    visibility: visible;
+}

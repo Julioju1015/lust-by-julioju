@@ -1,0 +1,71 @@
+.headline {
+    font-size: 30px;
+    color: #6C63FE;
+    font-weight: 600;
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.envelope,
+.lock,
+.pseudo {
+    color: #6C63FE;
+}
+
+.fields input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    width: 300px;
+    font-size: 15px;
+}
+
+.email-hr,
+.pseudo-hr,
+.confirm-hr,
+.password-hr {
+    width: 10%;
+    height: 2px;
+    background: #6C63FE;
+    transition: width 0.4s;
+}
+
+.email-hr.focus,
+.pseudo-hr.focus,
+.confirm-hr.focus,
+.password-hr.focus {
+    width: 100%;
+}
+
+.sign-in-submit,
+.sign-up-submit {
+    border: none;
+    background: #6C63FE;
+    color: white;
+    border: solid 2px #6C63FE;
+    padding: 12px;
+    border-radius: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+    outline: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.4s,
+        color 0.4s;
+}
+
+.sign-in-submit:hover,
+.sign-up-submit:hover {
+    background: white;
+    color: #6C63FE;
+}
